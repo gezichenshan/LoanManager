@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text,TouchableOpacity,Dimensions } from 'react-native'
 import styles from './styles'
-// import Icon from 'react-native-vector-icons/Ionicons'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 export default class FooterComponent extends Component {
     render() {
@@ -20,7 +20,7 @@ export default class FooterComponent extends Component {
 						navigation.navigate('Main')
 					}} style={[styles.item]}>
 						<View style={{justifyContent:'flex-end',alignItems:'center'}}>
-							{false&&<Icon name='ios-document-outline' style={{backgroundColor:'transparent'}}/>}
+							<Icon name='ios-home' style={{fontSize:30,color:'#333'}}/>
 							<Text style={{fontSize:fontSize,backgroundColor:'transparent'}}>首页</Text> 
 						</View>
 					</TouchableOpacity>
@@ -28,7 +28,7 @@ export default class FooterComponent extends Component {
 						navigation.navigate('Loan')
 					}} style={[styles.item]}>
 						<View style={{justifyContent:'center',alignItems:'center'}}>
-							{false&&<Icon name='ios-document-outline' style={{backgroundColor:'transparent'}}/>}
+							<Icon name='ios-cash' style={{fontSize:30,color:'#333'}}/>
 							<Text style={{backgroundColor:'transparent'}}>贷款</Text> 
 						</View>
 					</TouchableOpacity>
@@ -38,7 +38,7 @@ export default class FooterComponent extends Component {
 						}
 					}} style={[styles.item]}>
 						<View style={{justifyContent:'center',alignItems:'center'}}>
-							{false&&<Icon name='ios-document-outline' style={{backgroundColor:'transparent'}}/>}
+							<Icon name='ios-stats' style={{fontSize:30,color:'#333'}}/>
 							<Text style={{backgroundColor:'transparent'}}>投资</Text>
 						</View>
 					</TouchableOpacity>
@@ -48,7 +48,7 @@ export default class FooterComponent extends Component {
 						}
 					}} style={[styles.item]}>
 						<View style={{justifyContent:'center',alignItems:'center'}}>
-							{false&&<Icon name='ios-document-outline' style={{backgroundColor:'transparent'}}/>}
+							<Icon name='ios-eye' style={{fontSize:30,color:'#333'}}/>
 							<Text style={{backgroundColor:'transparent'}}>发现</Text>
 							
 						</View>
@@ -59,7 +59,7 @@ export default class FooterComponent extends Component {
 						}					
 					}} style={[styles.item]}>
 						<View style={{width:50,justifyContent:'center',alignItems:'center'}}>
-							{false&&<Icon name='ios-document-outline' style={{backgroundColor:'transparent'}}/>}
+							<Icon name='ios-person' style={{fontSize:30,color:'#333'}}/>
 							<Text style={{backgroundColor:'transparent'}}>我的</Text>
 						</View>
 					</TouchableOpacity>

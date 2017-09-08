@@ -1,9 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, TouchableOpacity, Platform } from 'react-native';
 import Swiper from 'react-native-swiper';
 import styles from '../../theme/'
 import ExcellentLoanListComponent from '../../components/excellent-loan-list'
 const { width } = Dimensions.get('window')
+import Icon from 'react-native-vector-icons/Ionicons'
+
 let creditCardData = [
 	{key:1,type:1,title:'广发唯品会信用卡',sub_title_1:'200元购物优惠券',count:'1000'},
 	{key:2,type:1,title:'广发东风日产车主信用卡',sub_title_1:'刷卡累积积分',count:'1000'},
@@ -41,34 +43,34 @@ export default class DiscoveryScreen extends React.Component {
   	return (
   		<View style={{flexDirection:'row',height:90,backgroundColor:'#fff',justifyContent:'space-between',alignItems:'center',paddingLeft:15,paddingRight:15}}>
   			<View style={{justifyContent:'center',alignItems:'center'}}>
-  					<Text>
-  						ICON
-  					</Text>
-  					<Text>
+  					<View style={{width:40,height:40,borderRadius:Platform.OS=='ios'?20:50,backgroundColor:'#ee636c',justifyContent:'center',alignItems:'center'}}>
+              <Icon name='md-watch' style={{fontSize:22,color:'#fff',backgroundColor:'transparent'}}/>
+            </View>
+  					<Text style={{color:'#012a36',fontSize:12,fontWeight:'500',marginTop:5}}>
   						普通会员
   					</Text>
   			</View>
   			<View style={{justifyContent:'center',alignItems:'center'}}>
-  					<Text>
-  						ICON
-  					</Text>
-  					<Text>
+            <View style={{width:40,height:40,borderRadius:Platform.OS=='ios'?20:50,backgroundColor:'#7592fb',justifyContent:'center',alignItems:'center'}}>
+  					  <Icon name='md-cafe' style={{fontSize:22,color:'#fff',backgroundColor:'transparent'}}/>
+            </View>
+  					<Text style={{color:'#012a36',fontSize:12,fontWeight:'500',marginTop:5}}>
   						白银会员
   					</Text>
   			</View>
   			<View style={{justifyContent:'center',alignItems:'center'}}>
-  					<Text>
-  						ICON
-  					</Text>
-  					<Text>
+  					<View style={{width:40,height:40,borderRadius:Platform.OS=='ios'?20:50,backgroundColor:'#f6d369',justifyContent:'center',alignItems:'center'}}>
+              <Icon name='md-umbrella' style={{fontSize:22,color:'#fff',backgroundColor:'transparent'}}/>
+            </View>
+  					<Text style={{color:'#012a36',fontSize:12,fontWeight:'500',marginTop:5}}>
   						黄金会员
   					</Text>
   			</View>
   			<View style={{justifyContent:'center',alignItems:'center'}}>
-  					<Text>
-  						ICON
-  					</Text>
-  					<Text>
+  					<View style={{width:40,height:40,borderRadius:Platform.OS=='ios'?20:50,backgroundColor:'#6eaae6',justifyContent:'center',alignItems:'center'}}>
+              <Icon name='md-wine' style={{fontSize:22,color:'#fff',backgroundColor:'transparent'}}/>
+            </View>
+  					<Text style={{color:'#012a36',fontSize:12,fontWeight:'500',marginTop:5}}>
   						白金会员
   					</Text>
   			</View>

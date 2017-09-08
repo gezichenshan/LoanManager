@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, TouchableOpacity} from 'react-native';
 import styles from './styles'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 let loanData = [
 	{key:1,type:1,name:'秒贷-极速贷',description:'15分钟快速审核 2小时快速贷款',range:'3000 - 30000',dailyRate:'0.03%',thumbnail:'../../../images/loan-item-1.jpeg'},
@@ -55,7 +56,7 @@ export default class ExcellentLoanListComponent extends React.Component {
   			</View>
   			<View style={{justifyContent:'center',justifyContent:'flex-end'}}>
   				<Text style={{color:'#999'}}>
-  					>
+  					<Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
   				</Text>
   			</View>
   		</TouchableOpacity>

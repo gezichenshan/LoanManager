@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, TouchableOpacity, Platform } from 'react-native';
 import styles from '../../theme/'
 const { width } = Dimensions.get('window')
+import Icon from 'react-native-vector-icons/Ionicons'
 
 export default class ProfileAccountSetting extends React.Component {
   static navigationOptions = {
@@ -19,9 +20,7 @@ export default class ProfileAccountSetting extends React.Component {
               <Text style={{fontSize:12,color:'#607d8b'}}>大雅</Text>
             </View>
             <View style={{flexDirection:'row',alignItems:'center'}}>
-              <Text style={{fontSize:15,fontWeight:'bold',color:'#607d8b'}}>
-                >
-              </Text>
+              <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
             </View>
           </View>
           <View style={{backgroundColor:'#ebf0f2',height:1}}></View>
@@ -45,9 +44,7 @@ export default class ProfileAccountSetting extends React.Component {
           </Text>
         </View>
         <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center',justifyContent:'flex-end'}}>
-          <Text style={{fontSize:15,fontWeight:'bold',color:'#607d8b'}}>
-            >
-          </Text>
+          <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
         </View>
       </View>
       <View style={{backgroundColor:'#e0e0e0',height:0.5}}></View>
@@ -61,9 +58,7 @@ export default class ProfileAccountSetting extends React.Component {
           <Text style={{fontSize:12,fontWeight:'bold',color:'#607d8b'}}>
             已设置
           </Text>
-          <Text style={{fontSize:15,fontWeight:'bold',color:'#607d8b'}}>
-            >
-          </Text>
+          <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
         </View>
       </View>
       </View>
@@ -84,13 +79,11 @@ export default class ProfileAccountSetting extends React.Component {
               <Text style={{fontSize:12,fontWeight:'bold',color:'#607d8b'}}>
                 保守型 (默认)
               </Text>
-              <Text style={{fontSize:12,fontWeight:'bold',color:'#607d8b'}}>
+              <Text style={{fontSize:12,fontWeight:'bold',color:'#607d8b',marginTop:5}}>
                 主动评估更准确
               </Text>
             </View>
-            <Text style={{fontSize:15,fontWeight:'bold',color:'#607d8b'}}>
-              >
-            </Text>
+            <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
           </View>
         </View>
       </View>

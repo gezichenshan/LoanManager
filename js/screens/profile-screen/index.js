@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, TouchableOpacity, Platform} from 'react-native';
 import styles from '../../theme/'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 export default class ProfileScreen extends React.Component {
   static navigationOptions = {
@@ -25,8 +26,9 @@ export default class ProfileScreen extends React.Component {
 	          	</View>
 	          	<View style={{flexDirection:'row',justifyContent:'space-between'}}>
 		          	<TouchableOpacity onPress={()=>navigation.navigate('ProfileWithdraw')} style={{paddingLeft:10}}>
-		          		<View>
-		          			<Text style={{color:'#fff',fontSize:12}}>总资产 (元) ^^</Text>
+		          		<View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+		          			<Text style={{color:'#e0e0ff',fontSize:12,fontWeight:'500'}}>总资产 (元) </Text>
+  			                <Icon name='ios-eye' style={{fontSize:22,color:'#e0e0ff',backgroundColor:'transparent'}}/>
 		          		</View>
 		          		<View>
 		          			<Text style={{fontSize:20,fontWeight:'bold',color:'#fff'}}>
@@ -35,8 +37,9 @@ export default class ProfileScreen extends React.Component {
 		          		</View>
 		          	</TouchableOpacity>
 		          	<View style={{paddingRight:10}}>
-		          		<View>
-		          			<Text style={{color:'#fff',fontSize:12}}>昨日收益 (元) ^^</Text>
+		          		<View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+		          			<Text style={{color:'#e0e0ff',fontSize:12,fontWeight:'500'}}>昨日收益 (元) </Text>
+		          			<Icon name='ios-stats' style={{fontSize:22,color:'#e0e0ff',backgroundColor:'transparent'}}/>
 		          		</View>
 		          		<View>
 		          			<Text style={{fontSize:20,fontWeight:'bold',color:'#fff'}}>
@@ -127,9 +130,7 @@ export default class ProfileScreen extends React.Component {
 					<Text style={{fontSize:12,fontWeight:'bold',color:'#ff9800',marginRight:10}}>
 						50%完成度
 					</Text>
-					<Text style={{fontSize:15,fontWeight:'bold',color:'#6b6b6b'}}>
-						>
-					</Text>
+					<Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
 				</View>
 			</TouchableOpacity>
 			<View style={{backgroundColor:'#e0e0e0',height:0.5}}></View>
@@ -143,9 +144,7 @@ export default class ProfileScreen extends React.Component {
 					<Text style={{fontSize:12,fontWeight:'bold',color:'#607d8b',marginRight:10}}>
 						139****1222
 					</Text>
-					<Text style={{fontSize:15,fontWeight:'bold',color:'#6b6b6b'}}>
-						>
-					</Text>
+					<Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
 				</View>
 			</TouchableOpacity>
 			<View style={{backgroundColor:'#e0e0e0',height:0.5}}></View>
@@ -159,9 +158,7 @@ export default class ProfileScreen extends React.Component {
 					<Text style={{fontSize:12,fontWeight:'bold',color:'#ff9800',marginRight:10}}>
 						未填写
 					</Text>
-					<Text style={{fontSize:15,fontWeight:'bold',color:'#6b6b6b'}}>
-						>
-					</Text>
+					<Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
 				</View>
 			</View>
 	  	</View>
@@ -178,9 +175,7 @@ export default class ProfileScreen extends React.Component {
 					</Text>
 				</View>
 				<View style={{flex:1,height:34,flexDirection:"row",alignItems:'center',justifyContent:'flex-end'}}>
-					<Text style={{fontSize:15,fontWeight:'bold',color:'#6b6b6b'}}>
-						>
-					</Text>
+					<Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
 				</View>
 			</View>
 			<View style={{backgroundColor:'#e0e0e0',height:0.5}}></View>
@@ -191,9 +186,7 @@ export default class ProfileScreen extends React.Component {
 					</Text>
 				</View>
 				<View style={{flex:1,height:34,flexDirection:"row",alignItems:'center',justifyContent:'flex-end'}}>
-					<Text style={{fontSize:15,fontWeight:'bold',color:'#6b6b6b'}}>
-						>
-					</Text>
+					<Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
 				</View>
 			</View>
 	  	</View>
@@ -210,9 +203,7 @@ export default class ProfileScreen extends React.Component {
 					</Text>
 				</View>
 				<View style={{flex:1,height:34,flexDirection:"row",alignItems:'center',justifyContent:'flex-end'}}>
-					<Text style={{fontSize:15,fontWeight:'bold',color:'#6b6b6b'}}>
-						>
-					</Text>
+					<Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
 				</View>
 			</View>
 	  	</View>

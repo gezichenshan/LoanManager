@@ -4,6 +4,7 @@ import Swiper from 'react-native-swiper';
 import styles from './styles'
 const { width } = Dimensions.get('window')
 import ExcellentLoanListComponent from '../../components/excellent-loan-list'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 let stockNewsData = [
 	{key:1,type:1,title:'9月最牛股推荐',sub_title:'网销底价，多重好礼，专项理财，更多收益',contributor:'网商银行',create_time:'2017-08-30'},
@@ -37,9 +38,7 @@ export default class InvestmentScreen extends React.Component {
   						</Text>
   					</View>
   					<View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-  						<Text>
-  						Icon
-  						</Text>
+              <Icon name='md-trending-up' style={{fontSize:30,color:'#fff'}}/>
   					</View>
   				</TouchableOpacity>
   				<TouchableOpacity style={[styles.categoryItem,{backgroundColor:'#f37476'}]}>
@@ -52,9 +51,7 @@ export default class InvestmentScreen extends React.Component {
   						</Text>
   					</View>
   					<View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-  						<Text>
-  						Icon
-  						</Text>
+  						<Icon name='md-cash' style={{fontSize:30,color:'#fff'}}/>
   					</View>
   				</TouchableOpacity>
   			</View>
@@ -69,9 +66,7 @@ export default class InvestmentScreen extends React.Component {
   						</Text>
   					</View>
   					<View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-  						<Text>
-  						Icon
-  						</Text>
+  						<Icon name='ios-pie' style={{fontSize:30,color:'#fff'}}/>
   					</View>
   				</TouchableOpacity>
   				<TouchableOpacity style={[styles.categoryItem,{backgroundColor:'#969ff2'}]}>
@@ -84,9 +79,7 @@ export default class InvestmentScreen extends React.Component {
   						</Text>
   					</View>
   					<View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-  						<Text>
-  						Icon
-  						</Text>
+  						<Icon name='ios-stats' style={{fontSize:30,color:'#fff'}}/>
   					</View>
   				</TouchableOpacity>
   			</View>

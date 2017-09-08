@@ -4,6 +4,7 @@ import Swiper from 'react-native-swiper';
 import styles from '../../theme/'
 import ExcellentLoanListComponent from '../../components/excellent-loan-list'
 const { width } = Dimensions.get('window')
+import Icon from 'react-native-vector-icons/Ionicons'
 
 export default class LoanSpacialTopic extends React.Component {
   static navigationOptions = {
@@ -40,10 +41,10 @@ export default class LoanSpacialTopic extends React.Component {
         </View>
         <View style={{marginTop:5,flexDirection:'row',alignItems:'center'}}>
           <View style={{flex:1,padding:10,justifyContent:'center',alignItems:'center'}}>
-            <Image style={{width:30,height:30}} source={require('../../../images/loan-process-1.png')}/>
+            <Icon name='ios-chatbubbles' style={{fontSize:30,color:'#159588'}}/>
           </View>
           <View style={{flex:1,padding:10,justifyContent:'center',alignItems:'center'}}>
-            <Image style={{width:30,height:30}} source={require('../../../images/loan-process-1.png')}/>
+            <Icon name='ios-people' style={{fontSize:45,color:'#159588'}}/>
           </View>
         </View>
       </View>

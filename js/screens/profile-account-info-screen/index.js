@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, TouchableOpacity, Platform } from 'react-native';
 import styles from '../../theme/'
 const { width } = Dimensions.get('window')
+import Icon from 'react-native-vector-icons/Ionicons'
 
 export default class ProfileAccountInfo extends React.Component {
   static navigationOptions = {
@@ -19,9 +20,7 @@ export default class ProfileAccountInfo extends React.Component {
           </View>
           <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center',justifyContent:'flex-end'}}>
             <Image style={{width:40,height:40,borderRadius:Platform.OS == 'ios' ? 20 : 50,marginRight:10}} source={require('../../../images/daya.jpeg')}/>
-            <Text style={{fontSize:15,fontWeight:'bold',color:'#607d8b'}}>
-              >
-            </Text>
+            <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
           </View>
         </View>
       </View>
@@ -74,9 +73,7 @@ export default class ProfileAccountInfo extends React.Component {
             <Text style={{fontSize:12,fontWeight:'500',color:'#ff9800'}}>
               未绑卡
             </Text>
-            <Text style={{fontSize:15,fontWeight:'bold',color:'#607d8b'}}>
-              >
-            </Text>
+            <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
           </View>
         </TouchableOpacity>
       </View>

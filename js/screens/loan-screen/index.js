@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, Toucha
 import Swiper from 'react-native-swiper';
 import styles from './styles'
 import ExcellentLoanListComponent from '../../components/excellent-loan-list'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 export default class LoanScreen extends React.Component {
   static navigationOptions = {
@@ -12,9 +13,10 @@ export default class LoanScreen extends React.Component {
   renderCondition() {
   	return(
   		<View style={[styles.itemContainer,{marginTop:0}]}>
-	  		<View style={{height:30}}>
-	  			<Text style={{fontSize:12}}>
-	  				筛选条件
+	  		<View style={{height:30,flexDirection:'row',alignItems:'center'}}>
+	  			<Icon name='ios-bookmark' style={{fontSize:18,color:'#333'}}/>
+	  			<Text style={{fontSize:12,marginLeft:10}}>
+	  				筛选贷款
 	  			</Text>
 	  		</View>
 	  		<View>
