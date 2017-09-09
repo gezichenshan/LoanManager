@@ -2,11 +2,12 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, TouchableOpacity, Platform } from 'react-native';
 import styles from '../../theme/'
 const { width } = Dimensions.get('window')
+import Icon from 'react-native-vector-icons/Ionicons'
 
 let vipInfoData = [
-  {key:1,name:'白银会员',features:['查阅白银会员文章','定制会员内容专栏推送','白银会员专属权限'],price:'99'},
-  {key:2,name:'黄金会员',features:['查阅白银会员文章','定制会员内容专栏推送','白银会员专属权限'],price:'199'},
-  {key:3,name:'白金会员',features:['查阅白银会员文章','定制会员内容专栏推送','白银会员专属权限'],price:'399'},
+  {key:1,name:'白银会员',features:['查阅白银会员文章','定制会员内容专栏推送','白银会员专属权限'],price:'99',checked:false},
+  {key:2,name:'黄金会员',features:['查阅白银会员文章','定制会员内容专栏推送','白银会员专属权限'],price:'199',checked:false},
+  {key:3,name:'白金会员',features:['查阅白银会员文章','定制会员内容专栏推送','白银会员专属权限'],price:'399',checked:true},
 ]
 
 export default class ArticleBrowser extends React.Component {
@@ -71,7 +72,12 @@ export default class ArticleBrowser extends React.Component {
       <View style={[styles.itemContainer,{marginTop:0,paddingRight:55,paddingTop:15,paddingBottom:15}]}>
         <View style={{flexDirection:'row'}}>
           <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center'}}>
-            <Text style={{fontSize:16,fontWeight:'500'}}>
+            {!item.checked?
+              <Icon name='md-square-outline' style={{fontSize:30,color:'#484748',marginTop:2}}/>
+              :
+              <Icon name='md-checkbox-outline' style={{fontSize:30,color:'#2c9a2d',marginTop:2}}/>
+            }
+            <Text style={{fontSize:16,fontWeight:'500',marginLeft:5}}>
               {item.name}
             </Text>
           </View>

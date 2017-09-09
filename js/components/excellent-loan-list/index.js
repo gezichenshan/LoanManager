@@ -10,7 +10,7 @@ let loanData = [
 	{key:4,type:1,name:'秒贷-极速贷',description:'15分钟快速审核 2小时快速贷款',range:'3000 - 30000',dailyRate:'0.03%'},
 	{key:5,type:2,name:'现金贷',description:'适合短期贷款需求',range:'3000 - 6000',dailyRate:'0.03%'}
 ]
-
+//精选贷款
 export default class ExcellentLoanListComponent extends React.Component {
   //精选贷款里的具体项目
   renderLoanItem = ({item}) => {

@@ -5,29 +5,18 @@ import styles from '../../theme/'
 import ExcellentLoanListComponent from '../../components/excellent-loan-list'
 const { width } = Dimensions.get('window')
 import Icon from 'react-native-vector-icons/Ionicons'
+import Carousel from '../../components/carousel'
+
+const imageUrls = {
+  image0: require('../../../images/special-topic-1.jpeg'), // statically analyzed
+  image1: require('../../../images/special-topic-2.jpeg'), // statically analyzed
+  image2: require('../../../images/special-topic-3.jpeg'), // statically analyzed
+}
 
 export default class LoanSpacialTopic extends React.Component {
   static navigationOptions = {
     title: '贷款专题',
   };
-  //图片轮播
-  renderCarousel() {
-  	return (
-  		<View style={{height:150}}>
-		    <Swiper style={styles.wrapper} showsPagination={true} autoplay={true}>
-		        <View style={styles.slide}>
-		        	<Image style={styles.image} source={require('../../../images/special-topic-1.jpeg')} />
-		        </View>
-		        <View style={styles.slide}>
-		          	<Image style={styles.image} source={require('../../../images/special-topic-2.jpeg')} />
-		        </View>
-		        <View style={styles.slide}>
-		          	<Image style={styles.image} source={require('../../../images/special-topic-3.jpeg')} />
-		        </View>
-		    </Swiper>
-	    </View>
-    )
-  }
   //邀请朋友获得奖励
   bonus() {
     return (
@@ -75,7 +64,7 @@ export default class LoanSpacialTopic extends React.Component {
     return (
       <View style={{flex:1}}>
       	<ScrollView style={styles.bg}>
-      		{this.renderCarousel()}
+      		<Carousel imageUrls={imageUrls}/>
       		<ExcellentLoanListComponent navigation={navigation}/>
           {this.bonus()}
       	</ScrollView>

@@ -5,7 +5,16 @@ import styles from './styles'
 const { width } = Dimensions.get('window')
 import ExcellentLoanListComponent from '../../components/excellent-loan-list'
 import Icon from 'react-native-vector-icons/Ionicons'
+import Carousel from '../../components/carousel'
 
+const imageUrls = {
+  image0: require('../../../images/investment-1.jpeg'), // statically analyzed
+  image1: require('../../../images/investment-2.jpeg'), // statically analyzed
+  image2: require('../../../images/investment-3.jpeg'), // statically analyzed
+  image3: require('../../../images/investment-4.jpeg'), // statically analyzed
+}
+
+//模拟数据
 let stockNewsData = [
 	{key:1,type:1,title:'9月最牛股推荐',sub_title:'网销底价，多重好礼，专项理财，更多收益',contributor:'网商银行',create_time:'2017-08-30'},
 	{key:2,type:2,title:'每日晨报',sub_title:'网销底价，多重好礼，专项理财，更多收益',contributor:'网商银行',create_time:'2017-08-30'},
@@ -102,27 +111,6 @@ export default class InvestmentScreen extends React.Component {
   		</View>
   	)
   }
-  //渲染中间图片轮播
-  renderCarousel() {
-  	return (
-  		<View style={{height:150}}>
-		    <Swiper style={styles.wrapper} showsPagination={true} autoplay={true}>
-		        <View style={styles.slide}>
-		        	<Image style={styles.image} source={require('../../../images/investment-1.jpeg')} />
-		        </View>
-		        <View style={styles.slide}>
-		          	<Image style={styles.image} source={require('../../../images/investment-2.jpeg')} />
-		        </View>
-		        <View style={styles.slide}>
-		          	<Image style={styles.image} source={require('../../../images/investment-3.jpeg')} />
-		        </View>
-		        <View style={styles.slide}>
-		          	<Image style={styles.image} source={require('../../../images/investment-4.jpeg')} />
-		        </View>
-		    </Swiper>
-	    </View>
-    )
-  }
   //资讯单独item
   renderNewsItem = ({item}) => {
   	let uri
@@ -211,7 +199,7 @@ export default class InvestmentScreen extends React.Component {
     	<ScrollView style={styles.bg}>
     		{this.renderCategory()}
     		{this.separator('推荐')}
-    		{this.renderCarousel()}
+    		<Carousel imageUrls={imageUrls}/>
     		{this.separator('股票资讯')}
     		{this.renderStockNews()}
     		{this.separator('期货资讯')}

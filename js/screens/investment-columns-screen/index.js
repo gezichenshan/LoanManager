@@ -4,6 +4,14 @@ import Swiper from 'react-native-swiper';
 import styles from './styles'
 const { width } = Dimensions.get('window')
 import ExcellentLoanListComponent from '../../components/excellent-loan-list'
+import Carousel from '../../components/carousel'
+
+const imageUrls = {
+  image0: require('../../../images/investment-1.jpeg'), // statically analyzed
+  image1: require('../../../images/investment-2.jpeg'), // statically analyzed
+  image2: require('../../../images/investment-3.jpeg'), // statically analyzed
+  image3: require('../../../images/investment-4.jpeg'), // statically analyzed
+}
 
 let stockNewsData = [
 	{key:1,type:1,title:'9月最牛股推荐',sub_title:'网销底价，多重好礼，专项理财，更多收益',contributor:'网商银行',create_time:'2017-08-30'},
@@ -31,27 +39,6 @@ export default class InvestmentColumnsScreen extends React.Component {
   			</View>
   		</View>
   	)
-  }
-  //渲染中间图片轮播
-  renderCarousel() {
-  	return (
-  		<View style={{height:150}}>
-		    <Swiper style={styles.wrapper} showsPagination={true} autoplay={true}>
-		        <View style={styles.slide}>
-		        	<Image style={styles.image} source={require('../../../images/investment-1.jpeg')} />
-		        </View>
-		        <View style={styles.slide}>
-		          	<Image style={styles.image} source={require('../../../images/investment-2.jpeg')} />
-		        </View>
-		        <View style={styles.slide}>
-		          	<Image style={styles.image} source={require('../../../images/investment-3.jpeg')} />
-		        </View>
-		        <View style={styles.slide}>
-		          	<Image style={styles.image} source={require('../../../images/investment-4.jpeg')} />
-		        </View>
-		    </Swiper>
-	    </View>
-    )
   }
   //资讯单独item
   renderNewsItem = ({item}) => {
@@ -111,7 +98,7 @@ export default class InvestmentColumnsScreen extends React.Component {
   	let navigation = this.props.navigation
     return (
     	<ScrollView style={styles.bg}>
-    		{this.renderCarousel()}
+    		<Carousel imageUrls={imageUrls}/>
     		{this.separator('股票资讯')}
     		{this.renderStockNews()}
     		<View style={{backgroundColor:'#e0e0e0',height:0.5}}></View>

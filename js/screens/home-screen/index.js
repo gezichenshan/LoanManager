@@ -3,31 +3,31 @@ import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, Toucha
 import Swiper from 'react-native-swiper';
 import styles from '../../theme/'
 import ExcellentLoanListComponent from '../../components/excellent-loan-list'
+import Carousel from '../../components/carousel'
+
+const imageUrls = {
+  image0: require('../../../images/carousel-1.jpeg'), // statically analyzed
+  image1: require('../../../images/carousel-2.jpeg'), // statically analyzed
+  image2: require('../../../images/carousel-3.jpeg'), // statically analyzed
+  image3: require('../../../images/carousel-4.jpeg'), // statically analyzed
+}
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     title: '贷款管家',
   };
-  //图片轮播
-  renderCarousel() {
-  	return (
-  		<View style={{height:150}}>
-		    <Swiper style={styles.wrapper} showsPagination={true} autoplay={true}>
-		        <View style={styles.slide}>
-		        	<Image style={styles.image} source={require('../../../images/carousel-1.jpeg')} />
-		        </View>
-		        <View style={styles.slide}>
-		          	<Image style={styles.image} source={require('../../../images/carousel-2.jpeg')} />
-		        </View>
-		        <View style={styles.slide}>
-		          	<Image style={styles.image} source={require('../../../images/carousel-3.jpeg')} />
-		        </View>
-		        <View style={styles.slide}>
-		          	<Image style={styles.image} source={require('../../../images/carousel-4.jpeg')} />
-		        </View>
-		    </Swiper>
-	    </View>
-    )
+  constructor(props) {
+    super(props)
+    this.state = {
+      loaded:false
+    }
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState(
+        {loaded:true}
+      )
+    }, 100);
   }
   //快速浏览其他产品
   others() {
@@ -112,7 +112,7 @@ export default class HomeScreen extends React.Component {
   // 精选贷款标题
   excellentLoanTitle() {
   	return (
-  		<View style={[styles.itemContainer,{paddingLeft:0,paddingRight:0}]}>
+  		<View style={[styles.itemContainer,{paddingLeft:0,paddingRight:0,paddingBottom:0}]}>
   			<View style={{flexDirection:'row',justifyContent:'space-between',paddingLeft:15,paddingRight:15,paddingBottom:5}}>
   				<View>
   					<Text>
@@ -135,7 +135,7 @@ export default class HomeScreen extends React.Component {
   	let navigation = this.props.navigation
     return (
     	<ScrollView style={styles.bg}>
-    		{this.renderCarousel()}
+    		<Carousel imageUrls={imageUrls}/>
     		{this.others()}
     		{this.recommandList()}
   			{this.excellentLoanTitle()}

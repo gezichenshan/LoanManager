@@ -4,6 +4,16 @@ import Swiper from 'react-native-swiper';
 import styles from '../../theme/'
 import ExcellentLoanListComponent from '../../components/excellent-loan-list'
 import Separator from '../../components/separator'
+import Carousel from '../../components/carousel'
+
+const imageUrls = {
+  image0: require('../../../images/investment-1.jpeg'), // statically analyzed
+  image1: require('../../../images/investment-2.jpeg'), // statically analyzed
+  image2: require('../../../images/investment-3.jpeg'), // statically analyzed
+  image3: require('../../../images/investment-4.jpeg'), // statically analyzed
+}
+
+//银行卡模拟数据
 let creditCardData = [
   {key:1,type:1,title:'广发唯品会信用卡',sub_title_1:'200元购物优惠券',count:'1000'},
   {key:2,type:1,title:'广发东风日产车主信用卡',sub_title_1:'刷卡累积积分',count:'1000'},
@@ -76,7 +86,7 @@ export default class DiscoveryCreditCart extends React.Component {
   	let navigation = this.props.navigation
     return (
     	<ScrollView style={styles.bg}>
-    		{this.renderCarousel()}
+    		<Carousel imageUrls={imageUrls}/>
         <Separator text={'推荐办卡'}/>
         {this.creditCartList()}
     	</ScrollView>

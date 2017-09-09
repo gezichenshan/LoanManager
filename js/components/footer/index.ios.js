@@ -9,7 +9,6 @@ export default class FooterComponent extends Component {
         const routes = navigation.state.routes
         const index = navigation.state.index
         const currentRouteName = routes[index].routeName
-        const fontSize =12
         return (
         	<View style={styles.footer}>
 	            <View style={[{flexDirection:'row'}]}>
