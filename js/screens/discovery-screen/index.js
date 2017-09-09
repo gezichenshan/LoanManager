@@ -131,7 +131,7 @@ export default class DiscoveryScreen extends React.Component {
   newsItem = ({item}) => {
   	let navigation = this.props.navigation
   	return (
-  		<TouchableOpacity onPress={()=>navigation.navigate('InvestmentChargeArticle')} style={[styles.itemContainer,{marginTop:0,paddingLeft:10,paddingRight:0,flexDirection:'row',alignItems:'center'}]}>
+  		<TouchableOpacity onPress={()=>navigation.navigate('DiscoveryArticle')} style={[styles.itemContainer,{marginTop:0,paddingLeft:10,paddingRight:0,flexDirection:'row',alignItems:'center'}]}>
   			<View>
   				<Image style={{width: 110,height: 70}} source={require('../../../images/home-item-2.jpeg')}/>
   			</View>

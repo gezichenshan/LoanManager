@@ -8,6 +8,7 @@ import InvestmentColumnsScreen from './screens/investment-columns-screen/'
 import InvestmentChargeArticleScreen from './screens/investment-charge-article-screen/'
 import DiscoveryCreditCardScreen from './screens/discovery-credit-card-screen/'
 import DiscoveryCreditCardApplyScreen from './screens/discovery-credit-card-apply-screen/'
+import DiscoveryArticleScreen from './screens/discovery-article-screen/'
 import ProfileAccountSettingScreen from './screens/profile-account-setting-screen/'
 import ProfileAccountInfoScreen from './screens/profile-account-info-screen/'
 import ProfileBankCardScreen from './screens/profile-bank-card-screen/'
@@ -35,6 +36,9 @@ const App = StackNavigator({
     },
     DiscoveryCreditCardApply:{
         screen: DiscoveryCreditCardApplyScreen
+    },
+    DiscoveryArticle:{
+        screen :DiscoveryArticleScreen
     },
     ProfileAccountSetting:{
         screen: ProfileAccountSettingScreen
