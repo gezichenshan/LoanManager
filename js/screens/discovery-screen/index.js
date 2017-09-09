@@ -144,9 +144,9 @@ export default class DiscoveryScreen extends React.Component {
 				</View>
 				<View style={{height:30,marginTop:5,flexDirection:'row',justifyContent:'flex-end',alignItems:'center',paddingRight:20}}>
 					{item.permission?
-						<Text style={{color:'#e51c23'}}>加入会员阅读</Text>
+						<Text style={{color:'#ec6846'}}>加入会员阅读</Text>
 						:
-						<Text style={{color:'#e51c23'}}>免费阅读</Text>
+						<Text style={{color:'#ec6846'}}>免费阅读</Text>
 					}
 				</View>
   			</View>
