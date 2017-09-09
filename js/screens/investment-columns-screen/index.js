@@ -58,7 +58,7 @@ export default class InvestmentColumnsScreen extends React.Component {
   	let uri
     let navigation = this.props.navigation
   	return (
-  		<TouchableOpacity onPress={()=>navigation.navigate('')} style={[styles.itemContainer,{paddingLeft:10,paddingRight:0,flexDirection:'row',alignItems:'center'}]}>
+  		<TouchableOpacity onPress={()=>navigation.navigate('InvestmentChargeArticle')} style={[styles.itemContainer,{paddingLeft:10,paddingRight:0,flexDirection:'row',alignItems:'center'}]}>
   			<View>
   				<Image style={styles.investmentItemImage} source={require('../../../images/investment-item-1.jpeg')}/>
   			</View>
