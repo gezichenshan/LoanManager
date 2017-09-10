@@ -12,22 +12,22 @@ export default class LoginBtn extends React.Component {
     return (
       <View>
         {currentRouteName=='Home'&&
-          <View style={{width:120,flexDirection:'row',height:30,paddingRight:10,paddingRight:10}}>
+          <TouchableOpacity onPress={()=>navigation.navigate('Login')} style={{width:120,flexDirection:'row',height:30,paddingRight:10,paddingRight:10}}>
             <View style={{flex:1,flexDirection:'row',alignItems:'center',justifyContent:'center',backgroundColor:'#384ba0',borderRadius:8,paddingLeft:5,paddingRight:5}}>
               <Icon name='md-person' style={{fontSize:16,color:'#b7bfe2',marginTop:2}}/>
-              <TouchableOpacity style={{padding:3}}>
+              <View style={{padding:3}}>
                 <Text style={{color:'#b7bfe2'}}>
                   登陆
                 </Text>
-              </TouchableOpacity>
+              </View>
               <Text style={{color:'#b7bfe2'}}>/</Text>
-              <TouchableOpacity style={{padding:3}}>
+              <View style={{padding:3}}>
                 <Text style={{color:'#b7bfe2'}}>
                   注册
                 </Text>
-              </TouchableOpacity>
+              </View>
             </View>
-          </View>
+          </TouchableOpacity>
         }
       </View>
     )

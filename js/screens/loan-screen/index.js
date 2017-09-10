@@ -40,6 +40,19 @@ export default class LoanScreen extends React.Component {
 		  					</TouchableOpacity>
 	  					</View>
 	  				</View>
+  					<View style={{marginTop:5}}>
+	  					<View style={{flex:1,flexDirection:'row'}}>
+		  					<TouchableOpacity style={{padding:5,paddingLeft:0,width:85}}>
+			  					<Text style={styles.conditionItemText}>自由职业者</Text>
+		  					</TouchableOpacity>
+		  					<TouchableOpacity style={styles.conditionItem}>
+			  					<Text style={styles.conditionItemText}>家庭主妇</Text>
+		  					</TouchableOpacity>
+		  					<TouchableOpacity style={styles.conditionItem}>
+			  					<Text style={styles.conditionItemText}>学生</Text>
+		  					</TouchableOpacity>
+	  					</View>
+	  				</View>
 	  				<View style={{flexDirection:'row',alignItems:'center',marginTop:10}}>
 	  					<TouchableOpacity>
 		  					<Text style={{fontWeight:'bold'}}>贷款金额</Text>

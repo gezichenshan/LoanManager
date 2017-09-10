@@ -25,7 +25,7 @@ export default class ProfileScreen extends React.Component {
 		            </View>
 	          	</View>
 	          	<View style={{flexDirection:'row',justifyContent:'space-between'}}>
-		          	<TouchableOpacity onPress={()=>navigation.navigate('ProfileWithdraw')} style={{paddingLeft:10}}>
+		          	<TouchableOpacity onPress={()=>navigation.navigate('ProfileAccountDetails')} style={{paddingLeft:10}}>
 		          		<View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
 		          			<Text style={{color:'#e0e0ff',fontSize:12,fontWeight:'500'}}>总资产 (元) </Text>
   			                <Icon name='ios-eye' style={{fontSize:22,color:'#e0e0ff',backgroundColor:'transparent'}}/>
@@ -114,12 +114,12 @@ export default class ProfileScreen extends React.Component {
   		</View>
   	)
   }
-  //column1个人资料、手机验证、会员资料等杂项
+  //column1个人资料
   column1() {
   	let navigation = this.props.navigation
   	return (
-  		<View style={[styles.itemContainer,{paddingTop:8,paddingBottom:8,backgroundColor:'#fff'}]}>
-	  		<TouchableOpacity onPress={()=>navigation.navigate('ProfileAccountSetting')} style={{flexDirection:"row",height:45,alignItems:'center'}}>
+  		<View style={[styles.itemContainer,{paddingTop:4,paddingBottom:4,backgroundColor:'#fff'}]}>
+	  		<TouchableOpacity onPress={()=>navigation.navigate('ProfileAccountInfo')} style={{flexDirection:"row",height:45,alignItems:'center'}}>
 				<View style={{flex:1,height:34,flexDirection:"row",alignItems:'center'}}>
 					<Text style={{fontSize:15,fontWeight:'bold',color:'#6b6b6b'}}>
 						个人资料
@@ -133,34 +133,6 @@ export default class ProfileScreen extends React.Component {
 					<Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
 				</View>
 			</TouchableOpacity>
-			<View style={{backgroundColor:'#e0e0e0',height:0.5}}></View>
-			<TouchableOpacity onPress={()=>navigation.navigate('ProfileAccountInfo')} style={{flexDirection:"row",height:45,alignItems:'center'}}>
-				<View style={{flex:1,height:34,flexDirection:"row",alignItems:'center'}}>
-					<Text style={{fontSize:15,fontWeight:'bold',color:'#6b6b6b'}}>
-						手机验证
-					</Text>
-				</View>
-				<View style={{flex:1,height:34,flexDirection:"row",alignItems:'center',justifyContent:'flex-end'}}>
-					<Text style={{fontSize:12,fontWeight:'bold',color:'#607d8b',marginRight:10}}>
-						139****1222
-					</Text>
-					<Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
-				</View>
-			</TouchableOpacity>
-			<View style={{backgroundColor:'#e0e0e0',height:0.5}}></View>
-			<View style={{flexDirection:"row",height:45,alignItems:'center'}}>
-				<View style={{flex:1,height:34,flexDirection:"row",alignItems:'center'}}>
-					<Text style={{fontSize:15,fontWeight:'bold',color:'#6b6b6b'}}>
-						会员资料
-					</Text>
-				</View>
-				<View style={{flex:1,height:34,flexDirection:"row",alignItems:'center',justifyContent:'flex-end'}}>
-					<Text style={{fontSize:12,fontWeight:'bold',color:'#ff9800',marginRight:10}}>
-						未填写
-					</Text>
-					<Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
-				</View>
-			</View>
 	  	</View>
   	)
   }
@@ -195,7 +167,7 @@ export default class ProfileScreen extends React.Component {
   //关于我们
   about() {
   	return (
-  		<View style={[styles.itemContainer,{paddingTop:8,paddingBottom:8,backgroundColor:'#fff'}]}>
+  		<View style={[styles.itemContainer,{paddingTop:4,paddingBottom:4,backgroundColor:'#fff'}]}>
 	  		<View style={{flexDirection:"row",height:45,alignItems:'center'}}>
 				<View style={{flex:1,height:34,flexDirection:"row",alignItems:'center'}}>
 					<Text style={{fontSize:15,fontWeight:'bold',color:'#6b6b6b'}}>

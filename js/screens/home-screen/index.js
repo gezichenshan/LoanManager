@@ -16,19 +16,6 @@ export default class HomeScreen extends React.Component {
   static navigationOptions = {
     title: '贷款管家',
   };
-  constructor(props) {
-    super(props)
-    this.state = {
-      loaded:false
-    }
-  }
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState(
-        {loaded:true}
-      )
-    }, 100);
-  }
   //快速浏览其他产品
   others() {
   	let navigation = this.props.navigation

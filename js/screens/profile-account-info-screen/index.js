@@ -14,8 +14,8 @@ export default class ProfileAccountInfo extends React.Component {
       <View style={[styles.itemContainer,{marginTop:0,paddingTop:5,paddingBottom:5,backgroundColor:'#fff'}]}>
         <View style={{flexDirection:"row",height:45,alignItems:'center'}}>
           <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center'}}>
-            <Text style={{fontSize:15,fontWeight:'bold',color:'#98a5ab'}}>
-              安全头像
+            <Text style={{fontWeight:'bold',color:'#98a5ab'}}>
+              设置头像
             </Text>
           </View>
           <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center',justifyContent:'flex-end'}}>
@@ -32,27 +32,43 @@ export default class ProfileAccountInfo extends React.Component {
       <View style={[styles.itemContainer,{paddingTop:8,paddingBottom:8,backgroundColor:'#fff'}]}>
         <View style={{flexDirection:"row",height:45,alignItems:'center'}}>
           <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center'}}>
-            <Text style={{fontSize:15,fontWeight:'bold',color:'#98a5ab'}}>
-              用户名
+            <Text style={{fontWeight:'bold',color:'#98a5ab'}}>
+              昵称
             </Text>
           </View>
           <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center',justifyContent:'flex-end'}}>
-            <Text style={{fontSize:12,fontWeight:'500',color:'#607d8b'}}>
+            <Text style={{fontSize:12,fontWeight:'500',color:'#607d8b',marginRight:5}}>
               tui1234
             </Text>
+            <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb',marginTop:2}}/>
           </View>
         </View>
         <View style={{backgroundColor:'#e0e0e0',height:0.5}}></View>
         <View style={{flexDirection:"row",height:45,alignItems:'center'}}>
           <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center'}}>
-            <Text style={{fontSize:15,fontWeight:'bold',color:'#98a5ab'}}>
-              手机号码
+            <Text style={{fontWeight:'bold',color:'#98a5ab'}}>
+              所在地
             </Text>
           </View>
           <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center',justifyContent:'flex-end'}}>
-            <Text style={{fontSize:12,fontWeight:'500',color:'#607d8b'}}>
-              139****1232
+            <Text style={{fontSize:12,fontWeight:'500',color:'#607d8b',marginRight:5}}>
+              南宁
             </Text>
+            <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb',marginTop:2}}/>
+          </View>
+        </View>
+        <View style={{backgroundColor:'#e0e0e0',height:0.5}}></View>
+        <View style={{flexDirection:"row",height:45,alignItems:'center'}}>
+          <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center'}}>
+            <Text style={{fontWeight:'bold',color:'#98a5ab'}}>
+              职业身份
+            </Text>
+          </View>
+          <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center',justifyContent:'flex-end'}}>
+            <Text style={{fontSize:12,fontWeight:'500',color:'#607d8b',marginRight:5}}>
+              上班族
+            </Text>
+            <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb',marginTop:2}}/>
           </View>
         </View>
       </View>
@@ -65,15 +81,29 @@ export default class ProfileAccountInfo extends React.Component {
       <View style={[styles.itemContainer,{paddingTop:8,paddingBottom:8,backgroundColor:'#fff'}]}>
         <TouchableOpacity onPress={()=>navigation.navigate('ProfileBankCard')} style={{flexDirection:"row",height:45,alignItems:'center'}}>
           <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center'}}>
-            <Text style={{fontSize:15,fontWeight:'bold',color:'#98a5ab'}}>
-              我的银行卡
+            <Text style={{fontWeight:'bold',color:'#98a5ab'}}>
+              我的支付宝账户
             </Text>
           </View>
           <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center',justifyContent:'flex-end'}}>
-            <Text style={{fontSize:12,fontWeight:'500',color:'#ff9800'}}>
-              未绑卡
+            <Text style={{fontSize:12,fontWeight:'500',color:'#999',marginRight:5}}>
+              未设置
             </Text>
-            <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb'}}/>
+            <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb',marginTop:2}}/>
+          </View>
+        </TouchableOpacity>
+        <View style={{backgroundColor:'#e0e0e0',height:0.5}}></View>
+        <TouchableOpacity onPress={()=>navigation.navigate('ProfileBankCard')} style={{flexDirection:"row",height:45,alignItems:'center'}}>
+          <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center'}}>
+            <Text style={{fontWeight:'bold',color:'#98a5ab'}}>
+              我的微信账户
+            </Text>
+          </View>
+          <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center',justifyContent:'flex-end'}}>
+            <Text style={{fontSize:12,fontWeight:'500',color:'#ff9800',marginRight:5}}>
+              jujude
+            </Text>
+            <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#bbb',marginTop:2}}/>
           </View>
         </TouchableOpacity>
       </View>

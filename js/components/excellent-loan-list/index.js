@@ -70,7 +70,7 @@ export default class ExcellentLoanListComponent extends React.Component {
   // 精选贷款
   excellentLoan() {
   	return (
-  		<View style={[styles.itemContainer,{paddingLeft:0,paddingRight:0,marginTop:0}]}>
+  		<View style={[styles.itemContainer,{paddingLeft:0,paddingRight:0,marginTop:0,paddingTop:0}]}>
   			<View>
   				<FlatList
 				  	data={loanData}

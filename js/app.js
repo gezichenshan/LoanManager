@@ -14,8 +14,13 @@ import ProfileAccountInfoScreen from './screens/profile-account-info-screen/'
 import ProfileBankCardScreen from './screens/profile-bank-card-screen/'
 import ProfileWithdrawScreen from './screens/profile-withdraw-screen/'
 import ProfileVipUpgradeScreen from './screens/profile-vip-upgrade-screen/'
-
+import ProfileAccountDetailsScreen from './screens/profile-account-details-screen/'
+import LoginScreen from './screens/login-screen'
+import LoginAccountSettingScreen from './screens/login-account-setting-screen'
 import LoginBtn from './components/login-button'
+
+import CardStackStyleInterpolator from 'react-navigation/src/views/CardStackStyleInterpolator';
+
 
 const AppContent = StackNavigator({
     Main: {
@@ -61,9 +66,33 @@ const AppContent = StackNavigator({
     },
     ProfileVipUpgrade:{
         screen: ProfileVipUpgradeScreen
+    },
+    ProfileAccountDetails:{
+        screen :ProfileAccountDetailsScreen,
+        navigationOptions: ({navigation}) => ({
+            headerStyle:{backgroundColor:'#4054b2'},
+            headerTintColor:'#fff',
+        }),
+    },
+    Login:{
+        screen: LoginScreen,
+        navigationOptions: ({navigation}) => ({
+            headerStyle:{backgroundColor:'#4054b2'},
+            headerTintColor:'#fff',
+        }),
+    },
+    LoginAccountSetting:{
+        screen: LoginAccountSettingScreen,
+        navigationOptions: ({navigation}) => ({
+            headerStyle:{backgroundColor:'#4054b2'},
+            headerTintColor:'#fff',
+        }),
     }
 },{
-    initialRouteName:'Main'
+    initialRouteName:'Main',
+    transitionConfig: () => ({
+        screenInterpolator: CardStackStyleInterpolator.forHorizontal,
+    }),
 })
 
 const App = () => 

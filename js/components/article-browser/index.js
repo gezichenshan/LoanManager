@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, TouchableOpacity, Platform } from 'react-native';
+import { View, Text, StyleSheet, Image, Dimensions, ScrollView, TouchableOpacity, Platform } from 'react-native';
 import styles from '../../theme/'
 const { width } = Dimensions.get('window')
 import UserInfoCard from '../../components/user-info-card'
@@ -70,7 +70,7 @@ export default class ArtitleBrowser extends React.Component {
       </View>
     )
   }
-  //征文部分
+  //正文部分
   renderArticleContent() {
     const {data} = this.props
     return (

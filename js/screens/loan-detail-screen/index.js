@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, TouchableOpacity } from 'react-native';
 import styles from '../../theme/'
 import FastApplyFooterComponent from '../../components/fast-apply-footer'
 const { width } = Dimensions.get('window')
@@ -9,6 +9,12 @@ export default class LoanDetail extends React.Component {
   static navigationOptions = {
     title: '贷款详情',
   };
+  constructor(props) {
+    super(props)
+    this.state = {
+      stretchIntro:false
+    }
+  }
   // 精选贷款
   detailTitle() {
   	return (
@@ -46,6 +52,12 @@ export default class LoanDetail extends React.Component {
   		</View>
   	)
   }
+  //点击展开按钮
+  stretch() {
+    this.setState({
+      stretchIntro : !this.state.stretchIntro
+    })
+  }
   //简介
   renderBriefIntroduction() {
     return (
@@ -56,16 +68,20 @@ export default class LoanDetail extends React.Component {
               |产品简介
             </Text>
           </View>
-          <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+          <TouchableOpacity onPress={()=>this.stretch()} style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
             <Text style={{fontSize:13,color:'#0088cc'}}>
               展开 
             </Text>
-            <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#ccc',marginTop:2}}/>
-          </View>
+            {this.state.stretchIntro?
+              <Icon name='ios-arrow-forward' style={{fontSize:20,color:'#ccc',marginTop:2}}/>
+              :
+              <Icon name='ios-arrow-down' style={{fontSize:20,color:'#ccc',marginTop:2}}/>
+            }
+          </TouchableOpacity>
         </View>
-        <View style={{marginTop:5}}>
-          <Text style={{fontSize:13,fontWeight:'500',color:'#9c9c9c'}}>
-            小赢卡贷是一款帮助年轻用户极速借款、轻松提额、快速到账的手机应用。小赢卡贷依托人脸识别、智能扫描等技术以及大数据风控，为用户打造“轻松申请、高效审批、快速放款”的移动端借款体验。
+        <View style={{marginTop:5}} ref={component => this.introContainer = component}>
+          <Text style={{fontSize:13,fontWeight:'500',color:'#9c9c9c'}} numberOfLines={this.state.stretchIntro?0:4}>
+            小赢卡贷是一款帮助年轻用户极速借款、轻松提额、快速到账的手机应用。小赢卡贷依托人脸识别、智能扫描等技术以及大数据风控，为用户打造“轻松申请、高效审批、快速放款”的移动端借款体验。小赢卡贷是一款帮助年轻用户极速借款、轻松提额、快速到账的手机应用。小赢卡贷依托人脸识别、智能扫描等技术以及大数据风控，为用户打造“轻松申请、高效审批、快速放款”的移动端借款体验。
           </Text>
         </View>
       </View>

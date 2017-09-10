@@ -91,6 +91,8 @@ export default class ProfileCreditCardApply extends React.Component {
             {...this.props}
             editable = {true}
             maxLength = {40}
+            underlineColorAndroid = {'transparent'}
+            clearButtonMode = {'always'}
             style={{flex:1}}/>
           {!result.success&&<Text style={{fontSize:10,color:'#f00'}}>{result.err_msg}</Text>}
         </View>
@@ -105,6 +107,8 @@ export default class ProfileCreditCardApply extends React.Component {
             placeholder={'请输入姓名'}
             editable = {true}
             maxLength = {40}
+            underlineColorAndroid = {'transparent'}
+            clearButtonMode = {'always'}
             style={{flex:1,fontSize:13}}
           />
         </View>
@@ -118,6 +122,8 @@ export default class ProfileCreditCardApply extends React.Component {
             {...this.props}
             editable = {true}
             maxLength = {40}
+            underlineColorAndroid = {'transparent'}
+            clearButtonMode = {'always'}
             style={{flex:1}}
           />
         </View>
@@ -132,6 +138,8 @@ export default class ProfileCreditCardApply extends React.Component {
             placeholder={'请输入身份证号码'}
             editable = {true}
             maxLength = {40}
+            underlineColorAndroid = {'transparent'}
+            clearButtonMode = {'always'}
             style={{flex:1,fontSize:13}}
           />
         </View>
@@ -146,7 +154,8 @@ export default class ProfileCreditCardApply extends React.Component {
             placeholder={'须与单位劳动合同公司名称一致'}
             editable = {true}
             maxLength = {40}
-            style={{flex:1}}
+            underlineColorAndroid = {'transparent'}
+            clearButtonMode = {'always'}
             style={{flex:1,fontSize:13}}
           />
         </View>

@@ -10,7 +10,7 @@ let vipInfoData = [
   {key:3,name:'白金会员',features:['查阅白银会员文章','定制会员内容专栏推送','白银会员专属权限'],price:'399',checked:true},
 ]
 
-export default class ArticleBrowser extends React.Component {
+export default class ProfileVipUpgrade extends React.Component {
   static navigationOptions = {
     title: '我的',
   };
@@ -66,10 +66,20 @@ export default class ArticleBrowser extends React.Component {
       <View style={{backgroundColor:'#e0e0e0',height:0.5}}></View>
     )
   }
+  //选择VIP
+  selectVip(item) {
+    for(let i=0;i<vipInfoData.length;i++){
+      let unit = vipInfoData[i]
+      unit.checked = false
+    }
+    item.checked = !item.checked
+    this.forceUpdate()
+  }
   //会员类别项
-  vipInfoItem = ({item}) => {
+  vipInfoItem = (item,index) => {
+    console.log(index)
     return (
-      <View style={[styles.itemContainer,{marginTop:0,paddingRight:55,paddingTop:15,paddingBottom:15}]}>
+      <TouchableOpacity onPress={()=>this.selectVip(item)} style={[styles.itemContainer,{marginTop:0,paddingRight:55,paddingTop:15,paddingBottom:15}]}>
         <View style={{flexDirection:'row'}}>
           <View style={{flex:1,height:34,flexDirection:"row",alignItems:'center'}}>
             {!item.checked?
@@ -90,18 +100,22 @@ export default class ArticleBrowser extends React.Component {
         <View>
           {this.featuresExtractorList(item.features)}
         </View>
-      </View>
+      </TouchableOpacity>
     )
   }
   //会员类别列表
   vipInfoList() {
     return (
       <View style={{paddingLeft:15,paddingRight:15}}>
-        <FlatList
-          data={vipInfoData}
-          renderItem={this.vipInfoItem}
-          ItemSeparatorComponent={this.SeparatorComponent}
-        />
+        {
+          vipInfoData.map((item, index) => {
+            return(
+              <View key={index}>
+                  {this.vipInfoItem(item,index)}
+              </View>
+            )
+          })
+        }
       </View>
     )
   }
